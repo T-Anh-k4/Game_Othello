@@ -5,9 +5,9 @@ class LevelMenu:
     def __init__(self, screen):
         self.screen = screen
         pygame.display.set_caption("Reversi - Chọn Cấp Độ")
-        self.background = pygame.image.load("Game_Othello/assets/img.png")
+        self.background = pygame.image.load("assets/img.png")
         self.background = pygame.transform.scale(self.background, (1000, 700))
-        self.back_icon = pygame.image.load("Game_Othello/assets/back.png")
+        self.back_icon = pygame.image.load("assets/back.png")
         self.back_icon = pygame.transform.scale(self.back_icon, (40, 40))
         self.WHITE = (255, 255, 255)
         self.DARK_GREEN = (0, 100, 0)

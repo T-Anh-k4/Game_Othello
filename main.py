@@ -7,7 +7,7 @@ class MainMenu:
         pygame.init()
         self.screen = pygame.display.set_mode((1000, 700))
         pygame.display.set_caption("Reversi")
-        self.background = pygame.image.load("Game_Othello/assets/img.png")
+        self.background = pygame.image.load("assets/img.png")
         self.background = pygame.transform.scale(self.background, (1000, 700))
         self.WHITE = (255, 255, 255)
         self.DARK_GREEN = (0, 100, 0)

@@ -56,9 +56,9 @@ class Othello:
         self.config = Config()
         self.mode = mode
 
-        self.player_avatar = pygame.image.load("Game_Othello/assets/player.png")
+        self.player_avatar = pygame.image.load("assets/player.png")
         self.player_avatar = pygame.transform.scale(self.player_avatar, (50, 50))
-        self.AI_avatar = pygame.image.load("Game_Othello/assets/AI.png")
+        self.AI_avatar = pygame.image.load("assets/AI.png")
         self.AI_avatar = pygame.transform.scale(self.AI_avatar, (50, 50))
 
         self.quit_button = pygame.Rect(750, 570, 150, 60)
@@ -70,7 +70,7 @@ class Othello:
 
         self.screen = pygame.display.set_mode((1000, 700))
         pygame.display.set_caption(f'Othello - Chế độ {self.mode.capitalize()}')
-        self.background = pygame.image.load("Game_Othello/assets/img.png")
+        self.background = pygame.image.load("assets/img.png")
         self.background = pygame.transform.scale(self.background, (1000, 700))
 
         self.player1 = 1
@@ -269,10 +269,10 @@ class Grid:
         self.y = rows
         self.x = columns
         self.size = size
-        self.whitetoken = loadImages('Game_Othello/assets/WhiteToken.png', size)
-        self.blacktoken = loadImages('Game_Othello/assets/BlackToken.png', size)
-        self.transitionWhiteToBlack = [loadImages(f'Game_Othello/assets/BlackToWhite{i}.png', self.size) for i in range(1, 4)]
-        self.transitionBlackToWhite = [loadImages(f'Game_Othello/assets/WhiteToBlack{i}.png', self.size) for i in range(1, 4)]
+        self.whitetoken = loadImages('assets/WhiteToken.png', size)
+        self.blacktoken = loadImages('assets/BlackToken.png', size)
+        self.transitionWhiteToBlack = [loadImages(f'assets/BlackToWhite{i}.png', self.size) for i in range(1, 4)]
+        self.transitionBlackToWhite = [loadImages(f'assets/WhiteToBlack{i}.png', self.size) for i in range(1, 4)]
         self.bg = self.loadBackGroundImages()
 
         self.tokens = {}
