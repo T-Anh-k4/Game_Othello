@@ -88,6 +88,7 @@ class LevelMenu:
                     for button in self.buttons:
                         if button["rect"].collidepoint(event.pos):
                             self.animate_button(button)
+                            pygame.mixer.music.stop()  # Dừng nhạc trước khi vào game
                             game = Othello(mode=button["mode"])
                             result = game.run()
                             if result == "quit":

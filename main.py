@@ -1,10 +1,24 @@
+import os
+
 import pygame
 import sys
 from level import LevelMenu
+from setting import SettingScreen
 
 class MainMenu:
     def __init__(self):
         pygame.init()
+        volume = 50
+        if os.path.exists("volume.txt"):
+            try:
+                with open("volume.txt", "r") as f:
+                    volume = int(f.read())
+                    volume = max(0, min(volume, 100))
+            except:
+                volume = 50
+        pygame.mixer.music.load("assets/theme.mp3")
+        pygame.mixer.music.set_volume(0.5)
+        pygame.mixer.music.play(-1)
         self.screen = pygame.display.set_mode((1000, 700))
         pygame.display.set_caption("Reversi")
         self.background = pygame.image.load("assets/img.png")
@@ -108,9 +122,15 @@ class MainMenu:
                                 result = level_menu.run()
                                 if result == "quit":
                                     self.running = False
+                                elif result == "main_menu":
+                                    pygame.mixer.music.play(-1)
                             elif button["text"] == "CÀI ĐẶT":
-                                # Placeholder cho cài đặt
-                                print("Tính năng cài đặt chưa được triển khai!")
+                                setting_screen = SettingScreen(self.screen)
+                                result = setting_screen.run()
+                                if result == "quit":
+                                    self.running = False
+                                # elif result == "main_menu":
+                                #     pygame.mixer.music.play(-1)
             pygame.display.flip()
         return "quit"
 
