@@ -135,7 +135,9 @@ class MainMenu:
         return "quit"
 
 if __name__ == "__main__":
-    menu = MainMenu()
-    menu.run()
-    pygame.quit()
-    sys.exit()
+    try:
+        menu = MainMenu()
+        menu.run()
+    finally:
+        pygame.quit()
+        sys.exit()
