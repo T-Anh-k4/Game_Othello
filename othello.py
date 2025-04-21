@@ -56,6 +56,9 @@ class Othello:
         self.config = Config()
         self.mode = mode
 
+        pygame.mixer.init()
+        self.move_sound = pygame.mixer.Sound("assets/soundnd.mp3")
+
         self.player_avatar = pygame.image.load("assets/player.png")
         self.player_avatar = pygame.transform.scale(self.player_avatar, (50, 50))
         self.AI_avatar = pygame.image.load("assets/AI.png")
@@ -150,6 +153,9 @@ class Othello:
     def make_move(self, row, col):
         self.grid.insertToken(self.grid.gridLogic, self.currentPlayer, row, col)
         swappableTiles = self.grid.swappableTiles(row, col, self.grid.gridLogic, self.currentPlayer)
+
+        self.move_sound.play()
+
         for tile in swappableTiles:
             self.grid.animateTransitions(tile, self.currentPlayer)
             self.grid.gridLogic[tile[0]][tile[1]] = self.currentPlayer
