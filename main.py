@@ -124,6 +124,8 @@ class MainMenu:
                                     self.running = False
                                 elif result == "main_menu":
                                     pygame.mixer.music.play(-1)
+
+
                             elif button["text"] == "CÀI ĐẶT":
                                 setting_screen = SettingScreen(self.screen)
                                 result = setting_screen.run()

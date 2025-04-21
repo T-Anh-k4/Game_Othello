@@ -93,7 +93,6 @@ class Othello:
         while self.RUN:
             result = self.input()
             if result == "main_menu":
-                pygame.quit()
                 return "main_menu"
             if result == "quit":
                 self.RUN = False

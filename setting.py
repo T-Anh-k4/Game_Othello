@@ -64,7 +64,7 @@ class SettingScreen:
             mouse_pos = pygame.mouse.get_pos()
             color = self.HOVER_GREEN if self.back_rect.collidepoint(mouse_pos) else self.BUTTON_GREEN
             pygame.draw.rect(self.screen, color, self.back_rect, border_radius=10)
-            back_text = self.font_text.render("Back", True, self.WHITE)
+            back_text = self.font_text.render("Thoát", True, self.WHITE)
             self.screen.blit(back_text, (self.back_rect.x + 35, self.back_rect.y + 10))
 
             pygame.draw.rect(self.screen, self.SLIDER_COLOR, self.slider_rect)
