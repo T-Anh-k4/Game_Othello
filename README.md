@@ -19,7 +19,7 @@ This project is a Python implementation of **Othello** using the **Pygame** libr
 
 ## 🚀 Installation
 
-### ✅ Step 1: Clone the Repository (or Download ZIP)
+### Step 1: Clone the Repository (or Download ZIP)
 
 Using Git (recommended):
 
@@ -32,7 +32,7 @@ Or download the project as a ZIP file from [GitHub](https://github.com/T-Anh-k4/
 
 ---
 
-### ✅ Step 2: Install Python Dependencies
+### Step 2: Install Python Dependencies
 
 Make sure you have Python 3.12 installed.
 
@@ -46,7 +46,7 @@ pip install pygame
 
 ---
 
-### ✅ Step 3: Run the Game
+### Step 3: Run the Game
 
 From the project directory, run:
 
